@@ -6,7 +6,7 @@ import { assets } from "../assets/assets";
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);
-    const {user, setUser, navigate}=useContext(AppContext)
+    const {user, setUser, navigate, setShowUserLogin}=useContext(AppContext)
     
     
     return (
@@ -55,7 +55,11 @@ const Navbar = () => {
     </>
 
             ): (
-                <button className="cursor-pointer px-8 py-2 bg-indigo-500
+                <button 
+                onClick={() => {
+                    setShowUserLogin(true)
+                } } 
+                className="cursor-pointer px-8 py-2 bg-indigo-500
                 hover:bg-indigo-600 transition text-white rounded-full">
                     Login
                 </button>
