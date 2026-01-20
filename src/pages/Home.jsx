@@ -1,5 +1,6 @@
 import Category from '../components/Category';
 import Banner from './../components/Banner';
+import BestSeller from './../components/BestSeller';
 
 
 const Home = () => {
@@ -7,6 +8,7 @@ const Home = () => {
     <div className='mt-10'>
       <Banner />
       <Category />
+      <BestSeller />
     </div>
   );
 };
