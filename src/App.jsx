@@ -9,6 +9,7 @@ import { AppContext } from './context/AppContext';
 import MyOrders from "./pages/MyOrders";
 import Auth from './modals/Auth';
 import Footer from "./components/Footer";
+import { Toaster } from "react-hot-toast";
 
 
 
@@ -19,6 +20,7 @@ const App = () => {
     <div className="text-default min-h-screen">
       {isSellerPath ? null : <Navbar />}
       {showUserLogin ? <Auth/> : null}
+      <Toaster />
         <div className="px-6 md:px-16 lg:px-24 xl:px-32">
             <Routes>
                 <Route path="/" element={<Home />} />
