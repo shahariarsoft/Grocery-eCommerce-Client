@@ -8,6 +8,7 @@ import { useContext } from "react";
 import { AppContext } from './context/AppContext';
 import MyOrders from "./pages/MyOrders";
 import Auth from './modals/Auth';
+import Footer from "./components/Footer";
 
 
 
@@ -27,6 +28,7 @@ const App = () => {
                 <Route path="/my-orders" element={<MyOrders />} />
             </Routes>
         </div>
+        {isSellerPath?null : <Footer />}
     </div>
   );
 };
