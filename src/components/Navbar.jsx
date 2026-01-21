@@ -6,7 +6,9 @@ import { assets } from "../assets/assets";
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);
-    const {user, setUser, navigate, setShowUserLogin}=useContext(AppContext)
+
+
+    const { user, setUser, navigate, setShowUserLogin, cartCount }=useContext(AppContext)
     
     
     return (
@@ -34,7 +36,9 @@ const Navbar = () => {
                 <div onClick={()=> navigate("/cart")}
                 className="relative cursor-pointer">
                     <img src={assets.cart_icon} alt="" className="w-7 h-7" />
-                    <button className="absolute -top-2 -right-3 text-xs text-white bg-indigo-500 w-[18px] h-[18px] rounded-full">3</button>
+                    <button className="absolute -top-2 -right-3 text-xs text-white bg-indigo-500 w-[18px] h-[18px] rounded-full">
+                        {cartCount()}
+                    </button>
                 </div>
 
 
