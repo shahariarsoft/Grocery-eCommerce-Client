@@ -27,8 +27,11 @@ const AppContextProvider = ({ children })  => {
             cartData[itemId] = 1;
         }
         setCartItems(cartData);
-        toast.success("add to cart");
+        toast.success("added to cart");
     };
+
+
+
 
     // update cart item quantity
     const updateCartItem = (itemId, quantity) => {
@@ -38,6 +41,9 @@ const AppContextProvider = ({ children })  => {
         toast.success("cart updated")
     };
 
+
+
+
     // total cart items
     const cartCount = () => {
         let totalCount = 0;
@@ -46,6 +52,9 @@ const AppContextProvider = ({ children })  => {
         }
         return totalCount;
     };
+
+
+
 
     // total cart amount
     const totalCartAmount = () => {
@@ -58,6 +67,10 @@ const AppContextProvider = ({ children })  => {
         }
         return Math.floor(totalAmount * 1000) / 100;
     };
+
+
+
+
 
     // remove product from cart
     const removeFromCart = (itemId) => {
