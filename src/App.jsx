@@ -10,6 +10,10 @@ import MyOrders from "./pages/MyOrders";
 import Auth from './modals/Auth';
 import Footer from "./components/Footer";
 import { Toaster } from "react-hot-toast";
+import SingleProduct from './pages/SingleProduct';
+
+
+
 
 
 
@@ -26,6 +30,7 @@ const App = () => {
                 <Route path="/" element={<Home />} />
                 <Route path="/products" element={<Products />} />
                 <Route path="/products/:category" element={<ProductCategory />} />
+                <Route path="/product/:category/:id" element={<SingleProduct />} />
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/my-orders" element={<MyOrders />} />
             </Routes>
@@ -36,3 +41,5 @@ const App = () => {
 };
 
 export default App;
+
+

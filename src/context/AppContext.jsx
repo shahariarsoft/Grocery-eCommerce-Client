@@ -55,7 +55,6 @@ const AppContextProvider = ({ children })  => {
 
 
 
-
     // total cart amount
     const totalCartAmount = () => {
         let totalAmount = 0;
@@ -64,11 +63,9 @@ const AppContextProvider = ({ children })  => {
             if (cartItems[items] > 0) {
                 totalAmount += cartItems[items] * itemInfo.offerPrice;
             }
-        }
+        } 
         return Math.floor(totalAmount * 1000) / 100;
     };
-
-
 
 
 
