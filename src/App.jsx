@@ -11,6 +11,7 @@ import Auth from './modals/Auth';
 import Footer from "./components/Footer";
 import { Toaster } from "react-hot-toast";
 import SingleProduct from './pages/SingleProduct';
+import Address from './pages/Address';
 
 
 
@@ -33,6 +34,7 @@ const App = () => {
                 <Route path="/product/:category/:id" element={<SingleProduct />} />
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/my-orders" element={<MyOrders />} />
+                <Route path="/add-address" element={<Address />} />
             </Routes>
         </div>
         {isSellerPath?null : <Footer />}
