@@ -1,12 +1,11 @@
-import Category from '../components/Category';
-import Banner from './../components/Banner';
-import BestSeller from './../components/BestSeller';
-import NewsLetter from '../components/NewsLetter';
-
+import Banner from "../components/Banner";
+import BestSeller from "../components/BestSeller";
+import Category from "../components/Category";
+import NewsLetter from "../components/NewsLetter";
 
 const Home = () => {
   return (
-    <div className='mt-10'>
+    <div className="mt-10">
       <Banner />
       <Category />
       <BestSeller />
@@ -14,5 +13,4 @@ const Home = () => {
     </div>
   );
 };
-
 export default Home;
